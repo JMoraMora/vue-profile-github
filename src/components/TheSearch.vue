@@ -1,13 +1,26 @@
 <template>
   <form class="form-inline">
-    <input type="text" placeholder="UserName">
+    <input type="text" placeholder="UserName" v-model="userName" @keyup="writeUserName">
     <button type="submit">SEARCH</button>
   </form>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
-
+  data() {
+    return {
+      userName: '',
+    }
+  },
+  methods:{
+    ...mapActions({
+      setUserName: 'setUserName'
+    }),
+    writeUserName(){
+      this.setUserName(this.userName)
+    }
+  }
 }
 </script>
 
