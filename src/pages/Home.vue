@@ -42,6 +42,7 @@ main {
   padding: 18px 10px;
 }
 footer {
+  margin-top: 25px;
   background: #213409;
   height: 80px;
   padding: 12px 0px;
