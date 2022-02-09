@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-
+    <Home></Home>
   </div>
 </template>
 
 <script>
-
+import Home from './pages/Home.vue'
 export default {
   name: 'App',
+  components: {
+    Home,
+  }
 }
 </script>
 
@@ -18,6 +21,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
